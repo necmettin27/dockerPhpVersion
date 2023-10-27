@@ -1,2 +1,2 @@
 # dockerPhpVersion
-dockerPhpVersion
+dockerPhpVersion değiştirmesi
