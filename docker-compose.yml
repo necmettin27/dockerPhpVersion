@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  app-network:
+
+volumes:
+  app-data:
+
+services:
+  myportalwebservice:
+    image: nginx:1.21.6-alpine
+    container_name: myportalwebservice
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+      - .docker/nginx:/etc/nginx/conf.d
+    networks:
+      app-network:
+
+  myportalbackend:
+    build:
+      context: .docker/php8.1
+      dockerfile: Dockerfile
+    container_name: myportalbackend
+    volumes:
+      - ./:/var/www
+      - .docker/php/php.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      app-network:
