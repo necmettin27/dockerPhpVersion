@@ -5,8 +5,8 @@ Daha sonra docker-compose up -d diyerek projeniz ayağa kalkacaktır.<br>
 
 host dosyanıza ekleyeceğiniz<br>
 örnek isimlendirme<br>
-127.0.0.1 myportal.test<br>
-127.0.0.1 myportal2.test<br>
+127.0.0.1 website.test<br>
+127.0.0.1 website2.test<br>
 
 <br>
 -----------------
